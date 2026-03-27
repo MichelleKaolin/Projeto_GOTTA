@@ -1,0 +1,175 @@
+use("GOTTA_DB");
+
+db.empresas.insertMany([
+  {
+    empresa_ID: 9297,
+    nome: "AmazDrones",
+    cnpj: "23456789000101",
+    estado: "Amazonas",
+    representante: {
+      nome: "Fernanda Almeida",
+      email: "fernanda.almeida@amaz.com.br",
+      telefone: null
+    },
+    areas_florestais: [
+      {
+        area_ID: 9,
+        nome_area: "Amazônia",
+        estado: "Amazonas",
+        relatorios: [
+          {
+            relat_ID: 1001,
+            tipo: "Normal",
+            data_criacao: new Date("2025-10-25"),
+            status: "Ativo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    empresa_ID: 2122,
+    nome: "EcoCeará",
+    cnpj: "12345678000190",
+    estado: "Ceará",
+    representante: {
+      nome: "Carlos Júnior Lima",
+      email: "carlos.lima@ecoceara.com.br",
+      telefone: null
+    },
+    areas_florestais: [
+      {
+        area_ID: 2,
+        nome_area: "Caatinga",
+        estado: "Ceará",
+        relatorios: [
+          {
+            relat_ID: 1002,
+            tipo: "AlertaFumaça",
+            data_criacao: new Date("2025-10-25"),
+            status: "Pendente"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    empresa_ID: 5153,
+    nome: "FlorCarioca",
+    cnpj: "34567890000112",
+    estado: "Rio de Janeiro",
+    representante: {
+      nome: "Marcos Rocha",
+      email: "marcos.rocha@floracar.com.br",
+      telefone: null
+    },
+    areas_florestais: [
+      {
+        area_ID: 5,
+        nome_area: "Mata Atlântica",
+        estado: "Rio de Janeiro",
+        relatorios: [
+          {
+            relat_ID: 1003,
+            tipo: "EmergênciaFogo1",
+            data_criacao: new Date("2025-10-25"),
+            status: "Crítico"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    empresa_ID: 8588,
+    nome: "AmbientalGaúcha",
+    cnpj: "45678901000123",
+    estado: "Rio Grande do Sul",
+    representante: {
+      nome: "Julia Ferraz",
+      email: "julia.ferraz@amgaucha.com.br",
+      telefone: null
+    },
+    areas_florestais: [
+      {
+        area_ID: 8,
+        nome_area: "Pampa",
+        estado: "Rio Grande do Sul",
+        relatorios: [
+          {
+            relat_ID: 1004,
+            tipo: "EmergênciaFogo2",
+            data_criacao: new Date("2025-10-25"),
+            status: "Crítico"
+          }
+        ]
+      }
+    ]
+  }
+]);
+db.tipos_relatorio.insertMany([
+  { tipo_ID: 11, descricao: "Normal" },
+  { tipo_ID: 22, descricao: "AlertaFumaça" },
+  { tipo_ID: 33, descricao: "EmergênciaFogo1" },
+  { tipo_ID: 44, descricao: "EmergênciaFogo2" }
+]);
+
+db.administradores.insertMany([
+  {
+    admin_ID: 1,
+    nome: "Daniela",
+    email: "daniela.paula01@fatec.sp.gov.br",
+    cargo: "Software Architect",
+    login: { usuario: "dani.gotta", senha: "0123" }
+  },
+  {
+    admin_ID: 2,
+    nome: "Filipe",
+    email: "filipe.terto@fatec.sp.gov.br",
+    cargo: "Dev Java",
+    login: { usuario: "fil.gotta", senha: "0123" }
+  },
+  {
+    admin_ID: 3,
+    nome: "Michelle",
+    email: "michelle.souza9@fatec.sp.gov.br",
+    cargo: "Data Analyst",
+    login: { usuario: "mich.gotta", senha: "0123" }
+  },
+  {
+    admin_ID: 4,
+    nome: "Pedro",
+    email: "pedro.silva426@fatec.sp.gov.br",
+    cargo: "UX Designer",
+    login: { usuario: "pedro.gotta", senha: "0123" }
+  }
+]);
+
+
+db.logins_empresas.insertMany([
+  { empresa_ID: 9297, usuario: "amaz.emp", senha: "2345" },
+  { empresa_ID: 2122, usuario: "ecoce.emp", senha: "2345" },
+  { empresa_ID: 5153, usuario: "florc.emp", senha: "2345" },
+  { empresa_ID: 8588, usuario: "ambgau.emp", senha: "2345" }
+]);
+
+db.empresas.find(
+  { "areas_florestais.estado": "Amazonas" },
+  {
+    _id: 0,
+    nome: 1,
+    estado: 1,
+    "representante.nome": 1,
+    "areas_florestais.nome_area": 1
+  }
+);
+
+db.administradores.find({}, { _id: 0, nome: 1, cargo: 1, "login.usuario": 1 });
+db.empresas.find(
+  { "areas_florestais.relatorios.status": "Crítico" },
+  {
+    _id: 0,
+    nome: 1,
+    "areas_florestais.nome_area": 1,
+    "areas_florestais.relatorios.tipo": 1
+  }
+);
