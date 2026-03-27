@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "Funcionamento";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/projeto.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="@Url.Content("~/img/logo.png")" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="@Url.Action("SobreNos", "Home")">Sobre nós</a></li>
+                <li><a href="@Url.Action("Funcionamento", "Home")">Funcionamento</a></li>
+                <li><a href="@Url.Action("Inscricao", "Home")">Inscrição</a></li>
+                <li><a href="@Url.Action("Mapa", "Home")">Mapa</a></li>
+                <li><a href="@Url.Action("Contato", "Home")"class="active">Contato</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="~/img/icon1.png" alt="Icone1"></a>
+                <a href="#"><img src="~/img/icon2.png" alt="Icone2"></a>
+                <a href="#"><img src="~/img/icon3.png" alt="Icone3"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1><img src="~/img/megaphone.png" alt="Megaphone" class="megaphone">  Contato</h1>
+            <p>Tem perguntas ou deseja saber mais sobre nosso projeto? Entre em contato conosco! Estamos abertos a sugestões, parcerias e colaborações. Sua participação é fundamental para a construção de um futuro mais seguro e sustentável.</p>
+
+            <p>Junte-se a nós na luta contra as queimadas!</p>
+
+            <form action="#" method="post" class="form-inscricao">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="" required>
+
+                <label for="duvidas">Dúvidas e Sugestões:</label>
+                <input type="text" id="duvidas" name="duvidas" placeholder="" required>
+
+                <div class="termo-uso">
+                    <input type="checkbox" id="termo" name="termo" required>
+                    <label for="termo">Concordo com o Termo de Uso e Privacidade</label>
+                </div>
+
+                <button type="submit" class="btn-inscricao">Enviar</button>
+            </form>
+        </section>
+        <div class="background-effect"></div>
+    </main>
+
+
+</body>
+</html>

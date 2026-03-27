@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Funcionamento";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/projeto.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="@Url.Content("~/img/logo.png")" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="@Url.Action("SobreNos", "Home")">Sobre nós</a></li>
+                <li><a href="@Url.Action("Funcionamento", "Home")">Funcionamento</a></li>
+                <li><a href="@Url.Action("Inscricao", "Home")"class="active">Inscrição</a></li>
+                <li><a href="@Url.Action("Mapa", "Home")">Mapa</a></li>
+                <li><a href="@Url.Action("Contato", "Home")">Contato</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="~/img/icon1.png" alt="Icone1"></a>
+                <a href="#"><img src="~/img/icon2.png" alt="Icone2"></a>
+                <a href="#"><img src="~/img/icon3.png" alt="Icone3"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1><img src="~/img/megaphone.png" alt="Megaphone" class="megaphone">   Participe</h1>
+            <p>Você pode se juntar à nossa causa! Crie uma conta para acompanhar as áreas monitoradas, receber atualizações e participar de nossas iniciativas. O cadastro é simples e rápido. Estamos aqui para oferecer suporte a todos que desejam contribuir para a prevenção de queimadas e a proteção do meio ambiente.</p>
+
+            <form action="#" method="post" class="form-inscricao">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="" required>
+
+                <div class="termo-uso">
+                    <input type="checkbox" id="termo" name="termo" required>
+                    <label for="termo">Concordo com o Termo de Uso e Privacidade</label>
+                </div>
+
+                <button type="submit" class="btn-inscricao">Cadastre-se</button>
+            </form>
+        </section>
+        <div class="background-effect"></div>
+    </main>
+
+
+</body>
+</html>

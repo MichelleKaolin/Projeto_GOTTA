@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Sobre Nós";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/projeto.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="@Url.Content("~/img/logo.png")" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="@Url.Action("SobreNos", "Home")" class="active">Sobre nós</a></li>
+                <li><a href="@Url.Action("Funcionamento", "Home")">Funcionamento</a></li>
+                <li><a href="@Url.Action("Inscricao", "Home")">Inscrição</a></li>
+                <li><a href="@Url.Action("Mapa", "Home")">Mapa</a></li>
+                <li><a href="@Url.Action("Contato", "Home")">Contato</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="~/img/icon1.png" alt="Icone1"></a>
+                <a href="#"><img src="~/img/icon2.png" alt="Icone2"></a>
+                <a href="#"><img src="~/img/icon3.png" alt="Icone3"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1><img src="~/img/megaphone.png" alt="Megaphone" class="megaphone">   Software de Controle de Queimadas</h1>
+            <h2><span>G</span>estão <span>O</span>timizada de <span>T</span>ecnologia de <span>T</span>ratamento <span>A</span>mbiental</h2>
+            <h3>Software de Dados químicos para controle de queimadas e criação de nuvens de chuva química.</h3>
+            <p>
+                Bem-vindo ao nosso projeto inovador de controle de queimadas. Nossa missão é utilizar tecnologia avançada para mapear vegetações e combater queimadas de maneira eficaz. Por meio do uso de drones e um software especializado em dados químicos, buscamos criar soluções sustentáveis para enfrentar os desafios das queimadas, promovendo a preservação ambiental e a segurança das comunidades.
+            </p>
+
+            <p>
+                Nosso sistema combina tecnologia de drones e inteligência artificial para mapear áreas propensas a queimadas. O software coleta e analisa dados químicos das vegetações, permitindo a identificação de pontos críticos. Em situações de emergência, a tecnologia de nuvens de chuva química é ativada, proporcionando um método eficiente para extinguir incêndios e restaurar a umidade do solo.
+            </p>
+        </section>
+        <div class="background-effect"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* TODAS AS PAGINAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    position: relative;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000000;
+}
+
+.navbar .logo {
+    margin-right: 1rem;
+    height: 130px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    display: flex;
+    gap: 3.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 35px;
+    margin-left: 20px;
+}
+
+.megaphone {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 25px;
+}
+
+
+.intro {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #da02da;
+}
+
+.intro h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.intro h2 span {
+    color: #b000b5;
+}
+
+
+.background-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/img/background-effect.png') no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+
+.accessibility-options {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.font-adjust {
+    background: #444;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #da02da;
+}
+
+/* PAGINA FUNCIONAMENTO */
+.hero {
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #03e2ff;
+}
+
+
+.intro {
+    text-align: center;
+    padding: 0.1rem 1rem;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #da02da;
+}
+
+.intro h2 span {
+    color: #b000b5;
+}
+
+/* PAGINA INSCRIÇÃO */
+.form-inscricao {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.form-inscricao label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.form-inscricao input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    background-color: #000000;
+    border: 2px solid #da02da;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-inscricao input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.termo-uso {
+    margin-bottom: 0rem;
+}
+
+.btn-inscricao {
+    width: 30%;
+    padding: 1rem;
+    background-color: #000000;
+    border: 2px solid #da02da;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-inscricao:hover {
+    background-color: #f205f2;
+}
+
+/* PAGINA CONTATO*/
+.termo-uso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+.termo-uso input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border: 2px solid #da02da;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    margin-right: 10px;
+}
+
+
+.termo-uso input[type="checkbox"]:checked {
+    background-color: #da02da;
+}
+
+
+.termo-uso label {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+
+/* PAGINA MAPA */
+.mapa {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.mapa h1 {
+    font-size: 2.5rem;
+    color: #4600b6;
+}
+
+.mapa p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+
+.filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filtro select {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: 2px solid #4600b6;
+    background-color: #000;
+    color: #fff;
+}
+
+.filtro button {
+    font-size: 1.4rem;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    border: 2px solid #4600b6;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filtro button:hover {
+    background-color: #4600b6;
+}
+
+
+.map-placeholder {
+    margin-top: -0.5rem;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.map-placeholder p {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* TODAS AS PÁGINAS */
+@font-face {
+    font-family: 'Brygada 1918';
+    src: url('../FONTES/Brygada1918-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brygada 1918';
+    src: url('../FONTES/Brygada1918-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Brygada 1918', serif; 
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 450; 
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 400; 
+    color: #ffffff;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: 400; 
+    color: #ffffff;
+}
+
+.navbar {
+    font-family: 'Brygada 1918', serif; 
+}

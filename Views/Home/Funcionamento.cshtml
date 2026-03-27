@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Funcionamento";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/projeto.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="@Url.Content("~/img/logo.png")" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="@Url.Action("SobreNos", "Home")">Sobre nós</a></li>
+                <li><a href="@Url.Action("Funcionamento", "Home")"class="active">Funcionamento</a></li>
+                <li><a href="@Url.Action("Inscricao", "Home")">Inscrição</a></li>
+                <li><a href="@Url.Action("Mapa", "Home")">Mapa</a></li>
+                <li><a href="@Url.Action("Contato", "Home")">Contato</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="~/img/icon1.png" alt="Icone1"></a>
+                <a href="#"><img src="~/img/icon2.png" alt="Icone2"></a>
+                <a href="#"><img src="~/img/icon3.png" alt="Icone3"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="background-effect"></div>
+            <h1><img src="~/img/megaphone.png" alt="Megaphone" class="megaphone">   Como monitoramos</h1>
+            <p>
+                Nosso sistema inovador de controle de queimadas opera por meio de uma integração sofisticada entre drones, sensores e software de análise de dados. O funcionamento é dividido em várias etapas cruciais:
+            </p>
+
+            <p>
+                <strong>1. Monitoramento Aéreo com Drones:</strong> Equipados com câmeras de alta resolução e sensores térmicos, nossos drones sobrevoam áreas florestais e de vegetação. Eles capturam imagens e dados em tempo real, permitindo uma vigilância constante das condições ambientais e da saúde da vegetação.
+            </p>
+
+            <p>
+                <strong>2. Coleta de Dados Químicos:</strong> Os drones são também equipados com sensores que analisam a composição química das plantas e do solo. Esses sensores medem variáveis como umidade, temperatura e a presença de substâncias que podem indicar risco de incêndio. Essa análise é vital para identificar áreas vulneráveis.
+            </p>
+
+            <p>
+                <strong>3. Análise em Tempo Real:</strong> Os dados coletados são enviados para nossa plataforma, onde um software de inteligência artificial processa as informações. Através de algoritmos avançados, o sistema identifica padrões e gera alertas sobre áreas com potencial para queimadas, permitindo uma resposta rápida e direcionada.
+            </p>
+
+            <p>
+                <strong>4. Criação de Nuvens de Chuva Química:</strong> Em situações de risco elevado, nosso sistema pode ativar a tecnologia de nuvens de chuva química. Isso envolve o lançamento de agentes químicos que favorecem a formação de nuvens e potencializam a precipitação. Essa abordagem não só ajuda a apagar incêndios, mas também contribui para a recuperação do ecossistema afetado.
+            </p>
+
+            <p>
+                <strong>5. Relatórios e Previsões:</strong> Além de monitorar e reagir a incêndios em tempo real, o sistema gera relatórios periódicos sobre as condições das vegetações e previsões de riscos. Esses relatórios são compartilhados com autoridades e comunidades locais, aumentando a conscientização e a preparação para possíveis queimadas.
+            </p>
+
+            <p>
+                Com essa metodologia abrangente e integrada, estamos comprometidos em transformar a forma como as queimadas são monitoradas e controladas, promovendo uma resposta mais eficaz e sustentável aos desafios ambientais.
+            </p>
+
+        </section>
+    </main>
+</body>
+</html>
